@@ -48,11 +48,10 @@ header{
 footer{
     color: black;
     font-family: Arial, Helvetica, sans-serif;
-    
 }
 
 footer p{
-    padding: 10px;
+    padding-top: center;
     font-size: smaller;
     font-weight: bold;
     text-wrap: wrap;
@@ -71,11 +70,12 @@ footer p:last-child{
     display: flex;
     width: 100%;
     text-align: center;
-    /* align-items: center; */
+    align-items: center ;
     justify-content: center;
     height: calc(100vh - 90vh);
     background-color: white;
     z-index:-1;
+    flex-wrap: wrap;
 }
 
 .navdiv{
@@ -125,26 +125,32 @@ footer p:last-child{
 }
 
 
-.nav{
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 35%;
-    min-height: 100vh;
-    display: block;
-    z-index: 98;
+
+
+.navcontainer{
     background-color: black;
     color: white;
-    padding-top: 120px;
+    position: fixed;
+    top: 0;
+    left: -90%;
+    width: 30%;
+    min-height: 100vh;
+    display: block; 
+    z-index: 98;
     -webkit-transition: 0.4s;
-    transition: 0.4s;
+    transition: 0.4s; 
 }
 
-.nav.is-active{
+
+.navcontainer.is-active{
     left:0;
 }
 
-.nav a{
+.navcontainer .nav{
+    padding-top: 120px;
+}
+
+.navcontainer .nav a{
     text-decoration: none;
     color: white;
     /* display: block;
@@ -158,15 +164,13 @@ footer p:last-child{
     text-decoration: none; */
 }
 
-.nav ul{
+.navcontainer .nav ul{
     list-style: none;
     margin: 0;
-    padding: 0;
-    
-    
+    padding: 0; 
 }
 
-.nav li{
+.navcontainer .nav li{
     border-bottom: 1px solid white;
     padding: 10px 0px 10px 15px;
     text-decoration: none;
@@ -174,10 +178,26 @@ footer p:last-child{
     
 }
 
-.nav li:last-child{
+.navcontainer .nav li:last-child{
     border-bottom: none;
 }
 
+.logox{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo2{
+    position: relative;
+    top: 13px;
+    left: 13px;
+}
+
+.eks2{
+    position: relative;
+    top: 13px;
+    right: 13px;
+}
 
 /* .burgermenu{
     --x-width: calc(var(--hamburger-height) * 1.41421356237);
