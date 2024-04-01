@@ -199,11 +199,11 @@ footer p:last-child{
     right: 13px;
 }
 
-@media screen and (min-width: 720px){
+/*@media screen and (min-width: 720px){
     .navcontainer{
         width: 45%;
     }
-}
+}*/
 /* .burgermenu{
     --x-width: calc(var(--hamburger-height) * 1.41421356237);
 
