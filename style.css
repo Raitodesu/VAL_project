@@ -133,7 +133,7 @@ footer p:last-child{
     position: fixed;
     top: 0;
     left: -90%;
-    width: 30%;
+    width: 25%;
     min-height: 100vh;
     display: block; 
     z-index: 98;
@@ -199,6 +199,11 @@ footer p:last-child{
     right: 13px;
 }
 
+@media screen and (min-width: 720px){
+    .navcontainer{
+        width: 45%;
+    }
+}
 /* .burgermenu{
     --x-width: calc(var(--hamburger-height) * 1.41421356237);
 
