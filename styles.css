@@ -129,7 +129,7 @@ footer p:last-child{
     position: fixed;
     top: 0;
     left: -100%;
-    width: 17%;
+    width: 35%;
     min-height: 100vh;
     display: block;
     z-index: 98;
