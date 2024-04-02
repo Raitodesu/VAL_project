@@ -25,7 +25,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; */
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 header{
@@ -33,15 +33,18 @@ header{
     position: fixed;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    z-index: 2
 }
 
 .content{
-    background-image: url(picture/background.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover; 
     padding: 0;
     margin:0;
+    background-image: url(picture/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    background-attachment: fixed;
+    
     height: 90vh;
 }
 
@@ -83,6 +86,7 @@ footer p:last-child{
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
+    
 }
 
 .hamburger-menu{
@@ -96,6 +100,7 @@ footer p:last-child{
     background: none;
     outline: none;
     border: none;
+    z-index: 5;
     
 }
 
@@ -110,6 +115,7 @@ footer p:last-child{
     margin: 6px 0px;
     -webkit-transition: 0.4s;
     transition: 0.4s;
+    
 }
 
 .hamburger-menu.is-active::before{
@@ -133,7 +139,7 @@ footer p:last-child{
     position: fixed;
     top: 0;
     left: -90%;
-    width: 25%;
+    width: 20%;
     min-height: 100vh;
     display: block; 
     z-index: 98;
@@ -168,6 +174,7 @@ footer p:last-child{
     list-style: none;
     margin: 0;
     padding: 0; 
+    
 }
 
 .navcontainer .nav li{
@@ -180,6 +187,14 @@ footer p:last-child{
 
 .navcontainer .nav li:last-child{
     border-bottom: none;
+}
+
+.navcontainer .nav li :hover{
+    color: #007D10;
+}
+
+.navcontainer .nav li :active{
+    color:blue;
 }
 
 .logox{
@@ -199,11 +214,33 @@ footer p:last-child{
     right: 13px;
 }
 
+.blur-background.is-active{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    position: absolute; /* Change position to absolute */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Lower z-index than .navdiv */
+}
+
+
+
 @media screen and (max-width: 720px){
     .navcontainer{
         width: 45%;
     }
+
 }
+
+@media screen and (max-height: 405px){
+    .navcontainer{
+        height: 100%;
+        overflow-y: auto;
+    }
+}
+
 /* .burgermenu{
     --x-width: calc(var(--hamburger-height) * 1.41421356237);
 
