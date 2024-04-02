@@ -36,7 +36,7 @@ header{
     z-index: 2
 }
 
-.content{
+.container-content{
     padding: 0;
     margin:0;
     background-image: url(picture/background.png);
@@ -46,6 +46,31 @@ header{
     background-attachment: fixed;
     
     height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.content{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+}
+
+th{
+    background-color: #242424;
+    color: #FFFFFF;
+}
+
+.table1 tr:last-child, .table2 tr:last-child{
+    color: #E4D014;
+}
+
+td{
+    text-align: center;
+    background-color: #56AF2E;
 }
 
 footer{
@@ -197,6 +222,7 @@ footer p:last-child{
     color:blue;
 }
 
+
 .logox{
     display: flex;
     justify-content: space-between;
@@ -206,6 +232,7 @@ footer p:last-child{
     position: relative;
     top: 13px;
     left: 13px;
+
 }
 
 .eks2{
